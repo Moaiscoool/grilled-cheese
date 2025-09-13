@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "grilled-cheese",
+	"version": "${version}",
+	"name": "grilled-cheese",
+    "description": "A mod that adds grilled cheese and more!",
+	"authors": [
+		"Moaiscoool"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/grilled-cheese",
+		"sources": "https://github.com/Moaiscoool/grilled-cheese"
+	},
+	"license": "CC BY-NC",
+	"icon": "assets/grilled-cheese/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.moaiscoool.Grilledcheese"
+		],
+		"client": [
+			"com.moaiscoool.GrilledcheeseClient"
+		]
+	},
+	"mixins": [
+		"grilled-cheese.mixins.json",
+		{
+			"config": "grilled-cheese.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
